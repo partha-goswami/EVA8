@@ -1,0 +1,86 @@
+**Problem Statement**
+
+MNIST Digits Classification using CNN. Following are the detailed specifications.
+
+![image](https://user-images.githubusercontent.com/46663815/212368279-7bcf1921-b4d6-4d5b-a74b-f455da2873e1.png)
+
+
+**Solution Results (Best so far for me)**
+
+Best Validation Accuracy - 99.44 Network Parameters - 17, 096
+
+loss=0.04569244012236595 batch_id=468: 100%|██████████| 469/469 [01:26<00:00,  5.40it/s]
+
+Epoch: 1, Test set: Average loss: 0.0555, Accuracy: 9828/10000 (98.28%)
+
+loss=0.011702985502779484 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.46it/s]
+
+Epoch: 2, Test set: Average loss: 0.0567, Accuracy: 9827/10000 (98.27%)
+
+loss=0.0264867153018713 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.47it/s]
+
+Epoch: 3, Test set: Average loss: 0.0442, Accuracy: 9866/10000 (98.66%)
+
+loss=0.1901024729013443 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.47it/s]
+
+Epoch: 4, Test set: Average loss: 0.0424, Accuracy: 9871/10000 (98.71%)
+
+loss=0.05914270877838135 batch_id=468: 100%|██████████| 469/469 [01:27<00:00,  5.35it/s]
+
+Epoch: 5, Test set: Average loss: 0.0403, Accuracy: 9879/10000 (98.79%)
+
+loss=0.04752087593078613 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.45it/s]
+
+Epoch: 6, Test set: Average loss: 0.0414, Accuracy: 9871/10000 (98.71%)
+
+loss=0.042216021567583084 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.47it/s]
+
+Epoch: 7, Test set: Average loss: 0.0400, Accuracy: 9883/10000 (98.83%)
+
+loss=0.02833688072860241 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.46it/s]
+
+Epoch: 8, Test set: Average loss: 0.0388, Accuracy: 9885/10000 (98.85%)
+
+loss=0.01053266879171133 batch_id=468: 100%|██████████| 469/469 [01:26<00:00,  5.42it/s]
+
+Epoch: 9, Test set: Average loss: 0.0403, Accuracy: 9887/10000 (98.87%)
+
+loss=0.06936798244714737 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.45it/s]
+
+Epoch: 10, Test set: Average loss: 0.0309, Accuracy: 9901/10000 (99.01%)
+
+loss=0.03258812054991722 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.46it/s]
+
+Epoch: 11, Test set: Average loss: 0.0332, Accuracy: 9903/10000 (99.03%)
+
+loss=0.06059591472148895 batch_id=468: 100%|██████████| 469/469 [01:26<00:00,  5.40it/s]
+
+Epoch: 12, Test set: Average loss: 0.0360, Accuracy: 9888/10000 (98.88%)
+
+loss=0.025702811777591705 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.46it/s]
+
+Epoch: 13, Test set: Average loss: 0.0411, Accuracy: 9886/10000 (98.86%)
+
+loss=0.10376865416765213 batch_id=468: 100%|██████████| 469/469 [01:25<00:00,  5.48it/s]
+
+Epoch: 14, Test set: Average loss: 0.0235, Accuracy: 9938/10000 (99.38%)
+
+loss=0.019813166931271553 batch_id=468: 100%|██████████| 469/469 [01:26<00:00,  5.42it/s]
+
+Epoch: 15, Test set: Average loss: 0.0226, Accuracy: 9944/10000 (99.44%)
+
+
+Target Accuracy obtained in 15 epochs. Current Test Accuracy is 99.44%. Stopping the Program.
+
+**Related Code**
+
+Please refer Session3_Assignment_Submission2.ipynb file
+
+**Other Specificaions**
+
+Epochs used: 15, Batch Size: 128, Optimizer: Adam, Learning Rate: 0.01
+
+**What changed from previous submission ?**
+
+Used Adam optimizer in place of SGD.
+Used Learning scheduler's ReduceLROnPlateau method with patience as 2.
