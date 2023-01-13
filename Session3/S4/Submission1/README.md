@@ -6,10 +6,14 @@ Following are the detailed specifications.
 ![image](https://user-images.githubusercontent.com/46663815/212351716-1024e647-91f9-4925-bbde-39021c3d7fd8.png)
 
 **Solution Results (Best so far for me)**
+
+
 Best Validation Accuracy - 99.32
 Network Parameters - 17, 096
 
 **Log of Results**
+
+
 loss=0.015010762959718704 batch_id=468: 100%|██████████| 469/469 [00:16<00:00, 28.46it/s]
 
 Epoch: 6, Test set: Average loss: 0.0372, Accuracy: 9886/10000 (98.86%)
@@ -69,10 +73,14 @@ Epoch: 19, Test set: Average loss: 0.0267, Accuracy: 9932/10000 (99.32%)
 Best Accuracy Observed as 99.32% while within 20 epochs.
 
 **Related Code**
+
+
 Please refer Session3_Assignment_Submission1.ipynb file
 
 **Other Specificaions**
-Epochs used: 19
-Batch Size: 128
+
+
+Epochs used: 19,
+Batch Size: 128,
 Optimizer: SGD, Learning Rate: 0.013, Momentum: 0.9
 
