@@ -97,3 +97,15 @@ Epochs used: 15, Batch Size: 128, Optimizer: Adam, Learning Rate: 0.01
 
 Used Adam optimizer in place of SGD.
 Used Learning scheduler's ReduceLROnPlateau method with patience as 2.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Few Learnings Obtained**
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. We did not use dropout at the first layer. It was reducing the accuracy.
+2. We did not use dropout and relu at the last convolution. Otherwise unstable low predictions were coming.
+3. We used batch size of 128. Smaller batch sizes like 32 and 64 gave more oscillations around error calculation (error graph would be less smoother).
+4. Overall SGD was giving good resuls over Adam, but I used Adam as the accuracy with SGD in my architecture wasn't going above 99.25 under 20 epochs, I tried with varied learning rate and momentum. Adam with scheduled learning rate gave me over 99.4 percent accuracy in 15 epochs.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
