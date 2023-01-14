@@ -44,3 +44,17 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/46663815/212445479-237f994a-e49d-4514-9bf7-4457dd23ad2d.png)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Steps for calculation**
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We have two inputs (i1 and i2). And we have taken initial values for weights starting from w1 till w8. We have calculated initial error and then propagated it back. We used learning rates as 0.1, 0.2, 0.5, 0.8, 1 and 2. We calculated rate of change of error with nearest output weight first and then used multiplication of partial derivatives to get the rate of change of error with respect to further weights from output. Please refer calculations section for details. If we plot the features (here weights, assuming bias is zero) and the total error, it can be mathematically proven that, at any point in that graph, the partial derivative would mean the tangent drawn at that point towards the minimum error. We would move towards that according to our learning rate (eta).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Limitations**
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+For illustration purpose, we showed by taking one data and calculating errors and backpropagating etc. at the excel. Usually the count of data is much more and neural network is more stable when fed with enormous data. In those cases, we take data in a batch, calculate error and back-propagate.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
