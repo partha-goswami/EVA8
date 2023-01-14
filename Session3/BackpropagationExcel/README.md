@@ -3,6 +3,14 @@
 ![image](https://user-images.githubusercontent.com/46663815/212443988-d8443196-6dae-462f-b94e-5af8c5a4f1d4.png)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+**What is the purpose of doing this exercise from a layman's angle**
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Everywhere we hear about neural networks and in neural network, we have heard that it can automatically select features and provide importance on them. So that we manually don't require to calculate like correlation metrics etc. In this excel, we showed how neural network does so for one data, for fixed number of epochs (epoch means number of times we have seen the total data). Once we have one pass output and true label/value for output, it can calculate the contribution of various features (weights, biases in our case, for ease or simplicity, we have counted bias as zero) on the error. That means, it can identify the positive, negative and no correlations (no correlation means negligible weights or zero weights). The more data we supply, the weights are better approximated to get the best results under specified constraints.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 **Neural Network Design and initial values Referred**
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/46663815/212444035-08d9acc6-dc90-403b-81c7-3a7a572e9cbc.png)
