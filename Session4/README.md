@@ -8,25 +8,32 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **First Submission - Various Calculations and Analysis**
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<img width="360" alt="Target-And-Results" src="https://user-images.githubusercontent.com/46663815/212836022-61491af7-68f9-4b9a-aa6b-139fca7e219d.png">
+Target - 
 
-Model - 
+Test Accuracy - 99.4
+Number of Parameters to be used - 8000
 
-<img width="289" alt="Model" src="https://user-images.githubusercontent.com/46663815/212836204-4dc181b6-8c10-48d3-b7ab-e36fe593a119.png">
+Results - 
 
-Calculating RF and various Other Dimensions - 
+Best Test Accuracy Got - 99.26
+Number of Parameters Used - 6.37 M
+
+Analysis - 
 
 <img width="817" alt="Analysis-CalculatingRF" src="https://user-images.githubusercontent.com/46663815/212836291-1fcaf07b-08f3-4e96-a493-b87959e1c364.png">
 
-Training and Test Metric Comparison - 
 
 <img width="641" alt="Analysis-TrainingAndTest" src="https://user-images.githubusercontent.com/46663815/212836365-338a1f7b-5bc3-4ed3-bb62-79a230ff29be.png">
 
 Final Comments - 
 
-<img width="305" alt="Analysis-Comments" src="https://user-images.githubusercontent.com/46663815/212836405-e3a1a2d5-d71f-4d59-b85e-621e6ee905c7.png">
+1. After 6th, the scope of further accuracy improvement via training is less than 0.5 %, so there's little to no chance of further test accuracy improvement.
+
+2. After 4th epoch, training accuracy is lot higher and almost near to 100 % and the difference between train and test accuracy is quite high. This gives an idea that may be the model is overfitting, or we have made more complex model for a simpler problem.
+
+3. We have not reached test accuracy, parameters used are huge in numbers. Plus we can see a sign of over fitting. Looks like, with this model design, we won't be able to cross 99.4 target accuracy even if we train for few more epochs as further actual training options seem limited.
 
 
 
