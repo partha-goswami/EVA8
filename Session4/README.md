@@ -201,3 +201,121 @@ Test set: Average loss: 0.0547, Accuracy: 9824/10000 (98.24%)
 3. At the end of last epoch, we have a training accuracy of 98.28, so the model should still learn and there is enough chance that test accuracy might improve if we take few more epochs.
 
 4. Its good that we could keep the number of parameters below 8000. Currently the number of parameters used are 7530. We assume, this might increase a bit while we would add the batch normalization (for keeping mean, std etc.) in next set of submissions, but we hope, we would be able to keep the number of parameters within 8000.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Third Submission - Various Calculations and Analysis**
+**Added Batch Normalization**
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Target** - 
+
+Test Accuracy - 99.4
+
+Number of Parameters to be used - 8000
+
+**Results** - 
+
+Best Test Accuracy Got - 99.10
+
+Number of Parameters Used - 7770
+
+**Analysis** - 
+
+For adding batch normalization, RF and other dimensionality calculations remain same like 2nd submission.
+
+<img width="843" alt="RFCalculation" src="https://user-images.githubusercontent.com/46663815/212968666-f4922e49-9e01-4fce-9fb8-129adf1637f2.png">
+
+<img width="616" alt="TrainAccuracy" src="https://user-images.githubusercontent.com/46663815/212968773-4017e626-ff2a-4dcd-a78c-20df5ddf1c1a.png">
+
+<img width="556" alt="TestAccuracy" src="https://user-images.githubusercontent.com/46663815/212968841-57bc6ed4-b84d-49a1-a402-aedb14a98b52.png">
+
+
+**Training Log** -
+
+EPOCH: 0
+Loss=0.08500686287879944 Batch_id=468 Accuracy=91.89: 100%|██████████| 469/469 [00:19<00:00, 23.87it/s]
+
+Test set: Average loss: 0.0995, Accuracy: 9714/10000 (97.14%)
+
+EPOCH: 1
+Loss=0.07431977242231369 Batch_id=468 Accuracy=97.82: 100%|██████████| 469/469 [00:14<00:00, 32.84it/s]
+
+Test set: Average loss: 0.0708, Accuracy: 9797/10000 (97.97%)
+
+EPOCH: 2
+Loss=0.11868520826101303 Batch_id=468 Accuracy=98.36: 100%|██████████| 469/469 [00:14<00:00, 32.26it/s]
+
+Test set: Average loss: 0.0440, Accuracy: 9866/10000 (98.66%)
+
+EPOCH: 3
+Loss=0.11161275953054428 Batch_id=468 Accuracy=98.67: 100%|██████████| 469/469 [00:14<00:00, 32.99it/s]
+
+Test set: Average loss: 0.0359, Accuracy: 9887/10000 (98.87%)
+
+EPOCH: 4
+Loss=0.04690796509385109 Batch_id=468 Accuracy=98.80: 100%|██████████| 469/469 [00:14<00:00, 32.46it/s]
+
+Test set: Average loss: 0.0447, Accuracy: 9857/10000 (98.57%)
+
+EPOCH: 5
+Loss=0.08476153016090393 Batch_id=468 Accuracy=98.90: 100%|██████████| 469/469 [00:14<00:00, 32.54it/s]
+
+Test set: Average loss: 0.0385, Accuracy: 9877/10000 (98.77%)
+
+EPOCH: 6
+Loss=0.010062671266496181 Batch_id=468 Accuracy=98.96: 100%|██████████| 469/469 [00:15<00:00, 30.17it/s]
+
+Test set: Average loss: 0.0340, Accuracy: 9893/10000 (98.93%)
+
+EPOCH: 7
+Loss=0.06732156127691269 Batch_id=468 Accuracy=99.00: 100%|██████████| 469/469 [00:14<00:00, 33.13it/s]
+
+Test set: Average loss: 0.0278, Accuracy: 9910/10000 (99.10%)
+
+EPOCH: 8
+Loss=0.0017466951394453645 Batch_id=468 Accuracy=99.12: 100%|██████████| 469/469 [00:14<00:00, 33.07it/s]
+
+Test set: Average loss: 0.0327, Accuracy: 9897/10000 (98.97%)
+
+EPOCH: 9
+Loss=0.0023736897855997086 Batch_id=468 Accuracy=99.19: 100%|██████████| 469/469 [00:13<00:00, 33.63it/s]
+
+Test set: Average loss: 0.0342, Accuracy: 9883/10000 (98.83%)
+
+EPOCH: 10
+Loss=0.008427104912698269 Batch_id=468 Accuracy=99.19: 100%|██████████| 469/469 [00:14<00:00, 33.33it/s]
+
+Test set: Average loss: 0.0336, Accuracy: 9888/10000 (98.88%)
+
+EPOCH: 11
+Loss=0.04995420202612877 Batch_id=468 Accuracy=99.27: 100%|██████████| 469/469 [00:13<00:00, 33.55it/s]
+
+Test set: Average loss: 0.0386, Accuracy: 9879/10000 (98.79%)
+
+EPOCH: 12
+Loss=0.06207267567515373 Batch_id=468 Accuracy=99.30: 100%|██████████| 469/469 [00:14<00:00, 33.29it/s]
+
+Test set: Average loss: 0.0286, Accuracy: 9908/10000 (99.08%)
+
+EPOCH: 13
+Loss=0.02146131545305252 Batch_id=468 Accuracy=99.35: 100%|██████████| 469/469 [00:14<00:00, 32.79it/s]
+
+Test set: Average loss: 0.0295, Accuracy: 9903/10000 (99.03%)
+
+EPOCH: 14
+Loss=0.07630743086338043 Batch_id=468 Accuracy=99.41: 100%|██████████| 469/469 [00:13<00:00, 33.54it/s]
+
+Test set: Average loss: 0.0295, Accuracy: 9907/10000 (99.07%)
+
+
+**Comments** - 
+
+1. Batch normalization has improved both average train and test accuracy and the model is converging faster.
+
+2. Batch normalization increased the number of parameters by around 200. Still we are using only 7700 odd parameters, well within the specified limit.
+
+
+
+
