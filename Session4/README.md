@@ -318,4 +318,118 @@ Test set: Average loss: 0.0295, Accuracy: 9907/10000 (99.07%)
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Fourth Submission - Various Calculations and Analysis**
+**Added Dropout/regularization**
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Target** - 
+
+Test Accuracy - 99.4
+
+Number of Parameters to be used - 8000
+
+**Results** - 
+
+Best Test Accuracy Got - 99.13
+
+Number of Parameters Used - 7770
+
+**Analysis** - 
+
+For adding batch normalization, RF and other dimensionality calculations remain same like 2nd submission.
+
+<img width="843" alt="RFCalculation" src="https://user-images.githubusercontent.com/46663815/213115726-9e0b091c-fa6e-4f12-90bc-36ddd143e10d.png">
+
+<img width="690" alt="TrainAccuracy" src="https://user-images.githubusercontent.com/46663815/213115793-3cb175c5-f83f-4aa5-9143-1812e717a0b0.png">
+
+<img width="698" alt="TestAccuracy" src="https://user-images.githubusercontent.com/46663815/213115841-782ed985-1d26-41bd-ae6d-4cc1bdbca45c.png">
+
+<img width="613" alt="TrainMinusTestAccuracy" src="https://user-images.githubusercontent.com/46663815/213115880-69523eec-9741-410d-b05c-835a60f6c276.png">
+
+
+
+**Training Log** -
+
+EPOCH: 0
+Loss=0.09455364942550659 Batch_id=468 Accuracy=89.64: 100%|██████████| 469/469 [00:18<00:00, 25.80it/s]
+
+Test set: Average loss: 0.0913, Accuracy: 9718/10000 (97.18%)
+
+EPOCH: 1
+Loss=0.1343652456998825 Batch_id=468 Accuracy=96.88: 100%|██████████| 469/469 [00:15<00:00, 30.80it/s]
+
+Test set: Average loss: 0.0663, Accuracy: 9801/10000 (98.01%)
+
+EPOCH: 2
+Loss=0.1577949970960617 Batch_id=468 Accuracy=97.74: 100%|██████████| 469/469 [00:15<00:00, 30.40it/s]
+
+Test set: Average loss: 0.0467, Accuracy: 9856/10000 (98.56%)
+
+EPOCH: 3
+Loss=0.12714873254299164 Batch_id=468 Accuracy=98.05: 100%|██████████| 469/469 [00:15<00:00, 31.00it/s]
+
+Test set: Average loss: 0.0507, Accuracy: 9849/10000 (98.49%)
+
+EPOCH: 4
+Loss=0.07319943606853485 Batch_id=468 Accuracy=98.28: 100%|██████████| 469/469 [00:15<00:00, 31.07it/s]
+
+Test set: Average loss: 0.0557, Accuracy: 9836/10000 (98.36%)
+
+EPOCH: 5
+Loss=0.037692248821258545 Batch_id=468 Accuracy=98.37: 100%|██████████| 469/469 [00:15<00:00, 30.04it/s]
+
+Test set: Average loss: 0.0409, Accuracy: 9877/10000 (98.77%)
+
+EPOCH: 6
+Loss=0.03277427703142166 Batch_id=468 Accuracy=98.47: 100%|██████████| 469/469 [00:15<00:00, 30.79it/s]
+
+Test set: Average loss: 0.0417, Accuracy: 9868/10000 (98.68%)
+
+EPOCH: 7
+Loss=0.1435360461473465 Batch_id=468 Accuracy=98.57: 100%|██████████| 469/469 [00:16<00:00, 29.29it/s]
+
+Test set: Average loss: 0.0408, Accuracy: 9869/10000 (98.69%)
+
+EPOCH: 8
+Loss=0.012902501039206982 Batch_id=468 Accuracy=98.64: 100%|██████████| 469/469 [00:15<00:00, 30.80it/s]
+
+Test set: Average loss: 0.0334, Accuracy: 9900/10000 (99.00%)
+
+EPOCH: 9
+Loss=0.0072029666043818 Batch_id=468 Accuracy=98.76: 100%|██████████| 469/469 [00:15<00:00, 30.89it/s]
+
+Test set: Average loss: 0.0312, Accuracy: 9901/10000 (99.01%)
+
+EPOCH: 10
+Loss=0.0102304145693779 Batch_id=468 Accuracy=98.77: 100%|██████████| 469/469 [00:15<00:00, 30.99it/s]
+
+Test set: Average loss: 0.0388, Accuracy: 9887/10000 (98.87%)
+
+EPOCH: 11
+Loss=0.06496897339820862 Batch_id=468 Accuracy=98.82: 100%|██████████| 469/469 [00:15<00:00, 30.64it/s]
+
+Test set: Average loss: 0.0337, Accuracy: 9899/10000 (98.99%)
+
+EPOCH: 12
+Loss=0.0763937458395958 Batch_id=468 Accuracy=98.78: 100%|██████████| 469/469 [00:15<00:00, 30.75it/s]
+
+Test set: Average loss: 0.0307, Accuracy: 9913/10000 (99.13%)
+
+EPOCH: 13
+Loss=0.031496454030275345 Batch_id=468 Accuracy=98.83: 100%|██████████| 469/469 [00:15<00:00, 30.83it/s]
+
+Test set: Average loss: 0.0426, Accuracy: 9879/10000 (98.79%)
+
+EPOCH: 14
+Loss=0.11864728480577469 Batch_id=468 Accuracy=98.93: 100%|██████████| 469/469 [00:15<00:00, 30.42it/s]
+
+Test set: Average loss: 0.0333, Accuracy: 9898/10000 (98.98%)
+
+
+**Comments** - 
+
+1. Looks like introducing dropoff has regularized the training and correlation between train and test accuracy. Detailed other comparison statistics are described alongside the charts.
+
+2. Although we are within limit in using number of model parameters, still out peak test accuracy hasn't touched the target accuracy. We would work upon that in next series of submissions.
