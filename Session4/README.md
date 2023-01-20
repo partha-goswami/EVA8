@@ -14,10 +14,12 @@ Model Parameters Used - 7640
 
 ipynb file - Session4_SixthSubmission.ipynb
 
+_Next we would be providing details as we progressed in submission, starting from first to sixth (final submission)_
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Next we would be providing details as we progressed in submission, starting from first to sixth (final submission)
+
 
 
 
