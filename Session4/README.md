@@ -9,7 +9,9 @@
 **Final Submission Details**
 
 **Best Test Accuracy - 99.42**
+
 **Model Parameters Used - 7640**
+
 **ipynb file - Session4_SixthSubmission.ipynb**
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
