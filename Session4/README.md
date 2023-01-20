@@ -5,6 +5,24 @@
 ![image](https://user-images.githubusercontent.com/46663815/212736577-8ee393df-6644-4204-b4ed-20e4891c49d5.png)
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Final Submission Details**
+
+**Best Test Accuracy - 99.42**
+**Model Parameters Used - 7640**
+**ipynb file - Session4_SixthSubmission.ipynb**
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Next we would be providing details as we progressed in submission, starting from first to sixth (final submission)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **First Submission - Various Calculations and Analysis**
 
@@ -549,3 +567,99 @@ Test set: Average loss: 0.0276, Accuracy: 9915/10000 (99.15%)
 1. One obvious model performance improvement we can see. The test accuracy hasn't ever come down below 99 percent after epoch number 7. This indicates, the inference accuracy is not by chance, rather the model consistently improved.
 
 2. Still we have not touched target test accuracy, so we would do further optimizations and would observe the result in next submissions.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Final Submission - Various Calculations and Analysis**
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Target** - 
+
+Test Accuracy - 99.4
+
+Number of Parameters to be used - 8000
+
+**Results** - 
+
+Best Test Accuracy Got - 99.42
+
+Number of Parameters Used - 7640
+
+
+**Analysis** - 
+
+RF Calculation would be same like previous as we have not added any extra layers in the model than our previous submission.
+
+<img width="843" alt="RFCalculation" src="https://user-images.githubusercontent.com/46663815/213706538-087c2fde-698d-4baf-bcef-2eb39cb09c5b.png">
+
+<img width="772" alt="TrainVsTest" src="https://user-images.githubusercontent.com/46663815/213706592-4c4a7bb4-759f-459f-be19-fda4d5ef52b1.png">
+
+
+**Training Log** -
+
+EPOCH: 0
+Loss=0.27262410521507263 Batch_id=468 Accuracy=81.43: 100%|██████████| 469/469 [00:38<00:00, 12.11it/s]
+Test set: Average loss: 0.0810, Accuracy: 9754/10000 (97.54%)
+
+EPOCH: 1
+Loss=0.25788623094558716 Batch_id=468 Accuracy=94.41: 100%|██████████| 469/469 [00:35<00:00, 13.04it/s]
+Test set: Average loss: 0.0645, Accuracy: 9785/10000 (97.85%)
+
+EPOCH: 2
+Loss=0.13935916125774384 Batch_id=468 Accuracy=95.76: 100%|██████████| 469/469 [00:35<00:00, 13.17it/s]
+Test set: Average loss: 0.0649, Accuracy: 9798/10000 (97.98%)
+
+EPOCH: 3
+Loss=0.11832254379987717 Batch_id=468 Accuracy=96.35: 100%|██████████| 469/469 [00:34<00:00, 13.65it/s]
+Test set: Average loss: 0.0569, Accuracy: 9823/10000 (98.23%)
+
+EPOCH: 4
+Loss=0.12303054332733154 Batch_id=468 Accuracy=96.71: 100%|██████████| 469/469 [00:34<00:00, 13.62it/s]
+Test set: Average loss: 0.0346, Accuracy: 9883/10000 (98.83%)
+
+EPOCH: 5
+Loss=0.05285732075572014 Batch_id=468 Accuracy=97.04: 100%|██████████| 469/469 [00:34<00:00, 13.64it/s]
+Test set: Average loss: 0.0428, Accuracy: 9867/10000 (98.67%)
+
+EPOCH: 6
+Loss=0.0554448626935482 Batch_id=468 Accuracy=97.20: 100%|██████████| 469/469 [00:35<00:00, 13.09it/s]
+Test set: Average loss: 0.0272, Accuracy: 9914/10000 (99.14%)
+
+EPOCH: 7
+Loss=0.04172109439969063 Batch_id=468 Accuracy=97.32: 100%|██████████| 469/469 [00:34<00:00, 13.51it/s]
+Test set: Average loss: 0.0309, Accuracy: 9914/10000 (99.14%)
+
+EPOCH: 8
+Loss=0.06748926639556885 Batch_id=468 Accuracy=97.53: 100%|██████████| 469/469 [00:34<00:00, 13.74it/s]
+Test set: Average loss: 0.0246, Accuracy: 9922/10000 (99.22%)
+
+EPOCH: 9
+Loss=0.12525376677513123 Batch_id=468 Accuracy=97.55: 100%|██████████| 469/469 [00:34<00:00, 13.64it/s]
+Test set: Average loss: 0.0247, Accuracy: 9929/10000 (99.29%)
+
+EPOCH: 10
+Loss=0.1687525361776352 Batch_id=468 Accuracy=97.60: 100%|██████████| 469/469 [00:34<00:00, 13.68it/s]
+Test set: Average loss: 0.0244, Accuracy: 9929/10000 (99.29%)
+
+EPOCH: 11
+Loss=0.09009213000535965 Batch_id=468 Accuracy=97.62: 100%|██████████| 469/469 [00:36<00:00, 13.00it/s]
+Test set: Average loss: 0.0230, Accuracy: 9926/10000 (99.26%)
+
+EPOCH: 12
+Loss=0.12872128188610077 Batch_id=468 Accuracy=97.81: 100%|██████████| 469/469 [00:34<00:00, 13.56it/s]
+Test set: Average loss: 0.0213, Accuracy: 9938/10000 (99.38%)
+
+EPOCH: 13
+Loss=0.035853102803230286 Batch_id=468 Accuracy=97.75: 100%|██████████| 469/469 [00:34<00:00, 13.71it/s]
+Test set: Average loss: 0.0179, Accuracy: 9941/10000 (99.41%)
+
+EPOCH: 14
+Loss=0.08171842247247696 Batch_id=468 Accuracy=97.84: 100%|██████████| 469/469 [00:34<00:00, 13.71it/s]
+Test set: Average loss: 0.0168, Accuracy: 9942/10000 (99.42%)
+
+
+**Comments** - 
+
+We could achieve target test accuracy while using lesser than 8k parameters. Moreover in the convoluions we used, we have made bias as false, hence there's less number of trainable parameters. We used SGD optimizer with StepLR for reaching the desired accuracy. SGD's learning rate is kept as 0.01, and momentum we kept at 0.9. Step size we used as 6, with gamma value as 0.1.
