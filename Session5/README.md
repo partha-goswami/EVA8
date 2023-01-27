@@ -88,10 +88,32 @@ Model
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Please refer - 
+(as per assignment guidelines, I have created a separate model file and took reference of it (imported) in the notebook.)
 
 https://github.com/partha-goswami/EVA8/blob/main/Session5/model.py
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Experiment Approach
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We tried with the following normalization approaches - 
+
+1. Batch Normalization with L1 factor as 0, and L2 factor as 0.
+2. Batch Normalization with L1 factor as 0, and L2 factor as 0.001.
+3. Batch Normalization with L1 factor as 0, and L2 factor as 0.002.
+4. Batch Normalization with L1 factor as 0.001, and L2 factor as 0.
+5. Batch Normalization with L1 factor as 0.001, and L2 factor as 0.001.
+6. Batch Normalization with L1 factor as 0.001, and L2 factor as 0.002.
+7. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.
+8. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.001.
+9. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.002.
+10.Layer Normalization with L1 factor as 0, and L2 factor as 0.
+11.Layer Normalization with L1 factor as 0, and L2 factor as 0.001.
+12.Layer Normalization with L1 factor as 0, and L2 factor as 0.002.
+13.Group Normalization with L1 factor as 0, and L2 factor as 0.
+14.Group Normalization with L1 factor as 0, and L2 factor as 0.001.
+15.Group Normalization with L1 factor as 0, and L2 factor as 0.002.
 
 
