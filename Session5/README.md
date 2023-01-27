@@ -151,9 +151,12 @@ _We used the legend in the following form - <norm_type>_<L1_factor>_<L2_factor>_
 
 ![image](https://user-images.githubusercontent.com/46663815/215125461-a7639fd9-15f8-48a8-b020-092c2ae1b5db.png)
 
+
+**Combined Normalization Comparison Results (on test loss) - **
+
+![image](https://user-images.githubusercontent.com/46663815/215134550-5b3fb267-7568-4841-ad9a-80cc85049081.png)
+
 Here we present a comparison study upon three best models using different normalization types.
-
-
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Misprediction Results**
