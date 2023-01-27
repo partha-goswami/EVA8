@@ -123,6 +123,7 @@ We tried with the following normalization approaches -
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![image](https://user-images.githubusercontent.com/46663815/215028170-7a55cb93-3549-48e4-8857-c16b46d98e42.png)
+
 ![image](https://user-images.githubusercontent.com/46663815/215028262-3942f245-0c50-41ff-85fc-4ea41c1bb138.png)
 
 
