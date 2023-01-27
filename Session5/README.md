@@ -1,7 +1,7 @@
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Requirement**
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 5th Assignment is:
 
@@ -43,3 +43,21 @@ your 3 collection-of-misclassified-images
 
 Upload your complete assignment on GitHub and share the link on LMS
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Normalization - What it is and why is it required **
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We have already used normalization while using any standard neural network libraries (for example, pytorch) while passing the input image to the first layer of the network. We do so by substracting the mean of the data from each pixel value (intensity value) and then dividing it by standard deviation of the data. We do normalization to keep the pixel values within a specific range. The range could be different for different type of data, or for different type of use cases, it can be 0 to 1, -1 to +1, -2 to +2 and anything of such sort.
+
+Above is a general definition. And then why do we need the normalization while passing the data across layers in neural network ?
+
+We know that, in case using neural network, we do not specify the features where we want to put stress on, rather network identifies those during training. From the computer vision topology, if we pass an image for classification (whether specified object is present in the image) or localization (where in the image, the object is), network learns which pixels (pixel intensities) in the image would be decisive in nature, and which are the ones, which has no (very minimal) effect on decision making.
+
+How it does that ? In first forward pass, it calculates the error by comparing the model output with the ground truth. Eventually it back-propagates the error, that means it tries to change the weights (and biases if opted) for each of the layers in order to minimize the error. If we do not put normalization while the data is passing across layers, then eventually some of the intermmediate outputs could be given extra weightage due to having higher value as activation result. Thus training would not be uniform and largely towards the bigger intermmediate outputs. There is a second reason although. At any given point of time during training, we calculate the contribution of each weight in the current error, we say, in the form of d(E)/d(w), where E is the error calculated, w is a specific weight, and we are taking the partial derivative (in order to make a small step towards minimum error). Now if there are intermmediate layers (of weights, and intermmediate outputs) between the said weight and the output, the contribution would be the multiple of all intermmediate partial derivatives in-between. Now, we can understand, any bigger value, when multipled again and again, would be even bigger. Either it can overflow or even unnecessarily overutilize the system memory resources ((we say, exploding gradient issue) and with added bias. We normalize so that training is uniform.
+
+When we say, we subtract mean, we are shifting the data (data distribution) to be centered around zero. And by diving by the standard deviation, we are scaling the data within a specific min-max range.
+
+Now, the next question comes. We said, we are subtracting by the mean of the data and then dividing by the standard deviation. What is the data (population) we are referring and does it vary ? Here lies the concept of various different types of normalizations, batch normalization (BN), layer normalization (LN), group normalization (GN), to name a few. By definition, BN layer transforms each input in the current mini-batch by subtracting the input mean in the current mini-batch and dividing it by the standard deviation. 
