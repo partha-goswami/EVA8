@@ -95,6 +95,8 @@ https://github.com/partha-goswami/EVA8/blob/main/Session5/model.py
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Notebooks**
 
+Notebook for conducting experiments - 
+
 https://github.com/partha-goswami/EVA8/blob/main/Session5/MNIST_Normalization_Experiments.ipynb
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
