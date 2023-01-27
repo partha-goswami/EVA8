@@ -61,3 +61,28 @@ How it does that ? In first forward pass, it calculates the error by comparing t
 When we say, we subtract mean, we are shifting the data (data distribution) to be centered around zero. And by diving by the standard deviation, we are scaling the data within a specific min-max range.
 
 Now, the next question comes. We said, we are subtracting by the mean of the data and then dividing by the standard deviation. What is the data (population) we are referring and does it vary ? Here lies the concept of various different types of normalizations, batch normalization (BN), layer normalization (LN), group normalization (GN), to name a few. By definition, BN layer transforms each input in the current mini-batch by subtracting the input mean in the current mini-batch and dividing it by the standard deviation. 
+
+We have seen some additional learnable parameters in case of BN. Let's think about those. The following we call as mini-batch mean - 
+
+![image](https://user-images.githubusercontent.com/46663815/215022154-622d2173-b359-4a1b-875a-69ab0c37e028.png)
+
+and the following we call as mini batch variance - 
+
+![image](https://user-images.githubusercontent.com/46663815/215022429-a5277b2c-6799-4df3-9019-3e8712fc3750.png)
+
+and for normalization, we use the following formula - 
+
+![image](https://user-images.githubusercontent.com/46663815/215022545-d93d15ae-56bb-4907-8d60-7910dc12ba43.png)
+
+(please note, square root of variance is standard deviation, and the extra term is added in denominator in order to avoid zero division error.
+
+Here is the final equation - 
+
+![image](https://user-images.githubusercontent.com/46663815/215023052-423bc15b-dec6-40ad-a570-7582b3bd0f4d.png)
+
+This gamma and beta are learnable parameters in case for BN.
+
+
+
+
+
