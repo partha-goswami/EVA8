@@ -82,6 +82,16 @@ Here is the final equation -
 
 This gamma and beta are learnable parameters in case for BN.
 
+Batch Normalization (BN) calculates the batch statistics(Mini-batch mean and variance) in every training iteration, hence obviously it requires larger batch sizes while training so that it can effectively approximate the population mean and variance from the mini-batch. This makes BN harder to train networks for application such as object detection, semantic segmentation, etc because they generally work with high input resolution(often as big as 1024x 2048) and training with larger batch sizes is not computationally feasible. Also Batch Normalization doesn't work well for RNNs. RNNs have a connection to the previous timesteps, hence separate beta and gamma has to be maintained for each linked timestep, this adds additional complexity to the BN layer. On the other hand, for image data, it has been seen that BNs usually work very well, previously researchers thought that it reduces internal covariance shifts. Now, as per latest study, BNs smoothens the error curve. Researchers confirmed this while they tested with real data and real data with added random noise.
+
+In Layer Normalization (LN), on the other hand, we concentrate applying normalization along the feature direction instead of mini-batch direction. This actually is more helpful for NLP tasks by removing the dependency on the mini-batches. However, if we use LN in image tasks, our accuracy most of the time, would be lesser compared to the BN cases.
+
+![image](https://user-images.githubusercontent.com/46663815/215138572-44e76e49-e42e-4906-a8d0-0a79c83a0c75.png)
+
+Similar to layer Normalization, Group Normalization (GN) is also applied along the feature direction but unlike LN, it divides the features into certain groups and normalizes each group separately. In practice, Group normalization performs better than layer normalization, and its parameter num_groups is tuned as a hyperparameter.
+At the above picture, given the activation of shape (N, C, H, W), BN normalizes the N direction, LN and GN normalize the C direction but GN additionally divides the C channels into groups and normalizes the groups individually.
+
+_Relevant Research paper consulted: _https://arxiv.org/abs/1903.10520
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Model**
