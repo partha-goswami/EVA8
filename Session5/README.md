@@ -189,7 +189,7 @@ _Please note, for each misclassified digit, the actual label and the predicted l
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 We are presenting training logs for the three best models using three different normalization types. For training log for other models, please refer https://github.com/partha-goswami/EVA8/blob/main/Session5/Session5_Normalization_Experiments.ipynb
 
-**Training Log for batch normalization model using L1 factor as 0, and L2 factor as 0.001 - **
+**Training Log for batch normalization model using L1 factor as 0, and L2 factor as 0.001 - ** 
 
 Epoch 1:
   0%|          | 0/469 [00:00<?, ?it/s]/usr/local/lib/python3.8/dist-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
