@@ -84,7 +84,7 @@ This gamma and beta are learnable parameters in case for BN.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Model
+**Model**
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Please refer - 
@@ -94,7 +94,7 @@ https://github.com/partha-goswami/EVA8/blob/main/Session5/model.py
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Experiment Approach
+**Experiment Approach**
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -109,11 +109,12 @@ We tried with the following normalization approaches -
 7. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.
 8. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.001.
 9. Batch Normalization with L1 factor as 0.002, and L2 factor as 0.002.
-10.Layer Normalization with L1 factor as 0, and L2 factor as 0.
-11.Layer Normalization with L1 factor as 0, and L2 factor as 0.001.
-12.Layer Normalization with L1 factor as 0, and L2 factor as 0.002.
-13.Group Normalization with L1 factor as 0, and L2 factor as 0.
-14.Group Normalization with L1 factor as 0, and L2 factor as 0.001.
-15.Group Normalization with L1 factor as 0, and L2 factor as 0.002.
+
+10. Layer Normalization with L1 factor as 0, and L2 factor as 0.
+11. Layer Normalization with L1 factor as 0, and L2 factor as 0.001.
+12. Layer Normalization with L1 factor as 0, and L2 factor as 0.002.
+13. Group Normalization with L1 factor as 0, and L2 factor as 0.
+14. Group Normalization with L1 factor as 0, and L2 factor as 0.001.
+15. Group Normalization with L1 factor as 0, and L2 factor as 0.002.
 
 
