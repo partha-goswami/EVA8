@@ -5,9 +5,19 @@ While using Depthwise separable convolution and dilated convolution blocks, we w
 
 
 
+
+
+
+
+
 **Model**
 
 https://github.com/partha-goswami/EVA8/blob/main/Session6/Model/model.py
+
+
+
+
+
 
 
 
