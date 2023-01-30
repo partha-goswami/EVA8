@@ -168,6 +168,10 @@ class Net(nn.Module):
         )
 
     def forward(self, x):
+        '''
+
+        :param x: input
+        '''
         x = self.conv1(x)
         x = self.conv2(x)
         x = self.conv3(x)
