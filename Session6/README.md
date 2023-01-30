@@ -22,4 +22,5 @@ https://github.com/partha-goswami/EVA8/blob/main/Session6/Model/model.py
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Model Parameters**: 97284
+
 **Final Receptive Fiield at the last layer**: 109
