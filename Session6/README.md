@@ -7,7 +7,7 @@ While using Depthwise separable convolution and dilated convolution blocks, we w
 &#x1F537;**Model**&#x1F537;
 
 
-https://github.com/partha-goswami/EVA8/blob/main/Session6/Model/model.py
+https://github.com/partha-goswami/EVA8/blob/main/Session6/models/model.py
 
 
 &#x1F537;**Model Parameters and Final RF**&#x1F537;
