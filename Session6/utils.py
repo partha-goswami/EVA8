@@ -130,3 +130,29 @@ def print_model_summary(model, device):
     '''
     cifar_model = model.to(device)
     return summary(cifar_model, input_size=(3, 32, 32))
+  
+def get_optimizer(config_dict, model):
+  '''
+  This method returns the optimizer
+  :param config_dict: config dictionary
+  :param model: model
+  '''
+  return optim.Adam(model.parameters(), lr=config_dict['learning_rate'], weight_decay=config_dict['L2_factor'])
+
+def get_scheduler(train_loader, config_dict, model):
+  '''
+  This method returns the scheduler
+  :param train_loader: train loader
+  :param config_dict: config dictionary
+  :param model: model
+  '''
+  optimizer = get_optimizer(config_dict, model)
+  return OneCycleLR(optimizer, max_lr=config_dict['learning_rate'],epochs=config_dict['epochs'],steps_per_epoch=len(train_loader)), optimizer
+
+def get_device():
+  '''
+  This method returns the device in use.
+  If cuda(gpu) is available it would return that, otherwise it would return cpu.
+  '''
+  use_cuda = torch.cuda.is_available()
+  return torch.device("cuda" if use_cuda else "cpu")
