@@ -16,9 +16,11 @@ https://github.com/partha-goswami/EVA8/blob/main/Session6/models/model.py
 &#x1F537;**Model Parameters and Final RF**&#x1F537;
 
 
-Model Parameters: 97284
+**Model Parameters**: 97284
 
-Final Receptive Fiield at the last layer: 109
+**Final Receptive Fiield at the last layer**: 109
+
+**Best Validation Accuracy Obtained**: 85.20 (72 epochs)
 
 _(Input, output and RF calculations are done at each step and is detailed at model.py file above. I have used both dilution and depthwise separable convolution.)_
 
