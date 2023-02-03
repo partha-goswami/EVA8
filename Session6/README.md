@@ -397,3 +397,17 @@ Test set: Average loss: 0.0018, Accuracy: 8520/10000 (85.20%)
 &#x1F537;**Validation Loss & Accuracy Graph**&#x1F537;
 
 ![image](https://user-images.githubusercontent.com/46663815/216041502-62769ac1-30cc-4665-adaf-7cd2f0a79580.png)
+
+
+&#x1F537;**_Sidenote - Depthwise Separable Convolution_**&#x1F537;
+
+The main difference between 2D convolutions and Depthwise Convolution is that 2D convolutions are performed over all/multiple input channels, whereas in Depthwise convolution, each channel is kept separate.
+
+Depthwise separable convolution does parameter reduction quite a lot. Let's see an example. At a given layer, let's suppose, the number of input channels are 128. Let's see the number of pamaters while we do a normal convolution with a kernel of 3 * 3 and we apply 256 such kernels. Then, for normal convolution case, the number of parameters would come as 3 * 3 * 128 * 256. In depthwise separable convolution, we apply number of convolutions equal to the number of channels. So, for depthwise convolution case, the number of parameters would come as (3 * 3 * 1 * 1 * 128 + 1 * 1 * 128 * 256). So, there would be parameter reduction factor as (3 * 3 * 128 * 256)/ (3 * 3 * 1 * 1 * 128 + 1 * 1 * 128 * 256) = 8.69.
+
+![image](https://user-images.githubusercontent.com/46663815/216529563-49f11566-1a50-4d9a-8336-19b55bc8d824.png)
+
+Even though we have 8 times reduction of parameters in case for depthwise separable convolutions, but accuracy drop than normal convolution would be few percentages only.Depthwise convolution is ideal for lightweight devices having less memory and compute, mobile phones could be an example. MobileNet version 1 and 2 are inspired by such technique.
+
+But we have seen that in case where high accuracy is required, models with depthwise separable convolutions, tend to underfit a bit. And if the relative size of the model is very small, reducing parameters through depthwise separable convolution may lead to complete failure of the model.
+
