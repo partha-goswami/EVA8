@@ -412,3 +412,15 @@ Even though we have 8 times reduction of parameters in case for depthwise separa
 
 But we have seen that in case where high accuracy is required, models with depthwise separable convolutions, tend to underfit a bit. And if the relative size of the model is very small, reducing parameters through depthwise separable convolution may lead to complete failure of the model.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+&#x1F537;**_Sidenote - Dilated Convolution_**&#x1F537;
+
+Dilation convolution is a technique that expands the kernel (input) by inserting holes between its consecutive elements. In simpler terms, it is the same as convolution but it involves pixel skipping, so as to cover a larger area of the input.
+
+![image](https://user-images.githubusercontent.com/46663815/216531441-ecf3acab-6818-47fe-848c-320d7479417d.png)
+
+The dilated convolution can increase the receptive field of the network in the convolution process without increasing convolution parameters, which can extract more global features and higher-level semantic features, thus improving the classification accuracy of the network.
+
+Dilated convolution helps expand the area of the input image covered without pooling. The objective is to cover more information from the output obtained with every convolution operation. This method offers a wider field of view at the same computational cost. The dilated convolution can first capture intrinsical sequence information by expanding the field of convolution kernel without increasing the parameter amount of the model.
+
