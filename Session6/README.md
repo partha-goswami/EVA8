@@ -424,3 +424,17 @@ The dilated convolution can increase the receptive field of the network in the c
 
 Dilated convolution helps expand the area of the input image covered without pooling. The objective is to cover more information from the output obtained with every convolution operation. This method offers a wider field of view at the same computational cost. The dilated convolution can first capture intrinsical sequence information by expanding the field of convolution kernel without increasing the parameter amount of the model.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+&#x1F537;**_Sidenote - Albumentations_**&#x1F537;
+
+Albumentations is a Python library for image augmentation. Image augmentation is used in deep learning and computer vision tasks to increase the quality of trained models. The purpose of image augmentation is to create new training samples from the existing data.
+
+![image](https://user-images.githubusercontent.com/46663815/216745795-9a783fb3-624a-44dc-b815-9151ef283744.png)
+
+Albumentations supports all common computer vision tasks such as classification, semantic segmentation, instance segmentation, object detection, and pose estimation. The library provides a simple unified API to work with all data types: images (RBG-images, grayscale images, multispectral images), segmentation masks, bounding boxes, and keypoints.It contains more than 70 different augmentations to generate new training samples from the existing data.
+Albumentations is fast.It works with popular deep learning frameworks such as PyTorch and TensorFlow.
+
+_(Example source: https://github.com/albumentations-team/albumentations)_
+
+
