@@ -29,7 +29,7 @@ https://github.com/partha-goswami/pytorch-cifar/blob/main/utils.py
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-&#x1F537;## Training Log (model: resnet18, epochs used: 20, best validation accuracy got: 92.0)&#x1F537;
+## Training Log (model: resnet18, epochs used: 20, best validation accuracy got: 92.0)&#x1F537;
 
 Epoch 1:
 Loss=1.1870989799499512 Batch_id=195 Accuracy=42.74: 100%|██████████| 196/196 [00:51<00:00,  3.80it/s]
