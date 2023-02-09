@@ -131,4 +131,14 @@ Loss=0.05817868560552597 Batch_id=195 Accuracy=96.71: 100%|███████
 Test set: Average loss: 0.0011, Accuracy: 9198/10000 (91.98%)
 
 
+## Validation Loss and Accuracy Progression&#x1F537;
 
+![image](https://user-images.githubusercontent.com/46663815/217888365-935657b5-37e0-4da4-a4fd-1a77573eaf1c.png)
+
+## Misclassified Images Gallery&#x1F537;
+
+![image](https://user-images.githubusercontent.com/46663815/217888767-a7c4f582-6165-4ff8-8de0-cb7dbb6fa9c5.png)
+
+## GradCAM Outputs Gallery&#x1F537;
+
+![image](https://user-images.githubusercontent.com/46663815/217889231-d50cd9a1-3d19-42de-ac01-4391d11d097a.png)
