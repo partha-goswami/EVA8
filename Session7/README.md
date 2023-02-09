@@ -2,32 +2,31 @@
 
 Task is to train resnet model for 20 epochs on CIFAR10 dataset and observe and plot loss curves, both for test and train datasets. Next task would be to identify 10 misclassified images. And we would have to show the GradCAM output on those 10 misclassified images.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Repo&#x1F537;
 
 https://github.com/partha-goswami/pytorch-cifar
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Model&#x1F537;
 
 https://github.com/partha-goswami/pytorch-cifar/blob/main/models/resnet.py
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## main.py&#x1F537;
 
 https://github.com/partha-goswami/pytorch-cifar/blob/main/main.py
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## utils.py&#x1F537;
 
 https://github.com/partha-goswami/pytorch-cifar/blob/main/utils.py
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Training Log (model: resnet18, epochs used: 20, best validation accuracy got: 92.0)&#x1F537;
 
@@ -132,4 +131,4 @@ Loss=0.05817868560552597 Batch_id=195 Accuracy=96.71: 100%|███████
 Test set: Average loss: 0.0011, Accuracy: 9198/10000 (91.98%)
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
