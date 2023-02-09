@@ -27,108 +27,192 @@ https://github.com/partha-goswami/pytorch-cifar/blob/main/main.py
 
 https://github.com/partha-goswami/pytorch-cifar/blob/main/utils.py
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-&#x1F537;**Training Log (epochs used: 20, best validation accuracy got: 89.15)**&#x1F537;
+&#x1F537;**resnet18 architecture**&#x1F537;
+
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=512, out_features=10, bias=True)
+)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+&#x1F537;**Training Log (model: resnet18, epochs used: 20, best validation accuracy got: 92.0)**&#x1F537;
 
 Epoch 1:
-Loss=1.4874705076217651 Batch_id=195 Accuracy=39.03: 100%|██████████| 196/196 [01:24<00:00,  2.32it/s]
+Loss=1.1870989799499512 Batch_id=195 Accuracy=42.74: 100%|██████████| 196/196 [00:51<00:00,  3.80it/s]
 
-Test set: Average loss: 0.0073, Accuracy: 4161/10000 (41.61%)
+Test set: Average loss: 0.0053, Accuracy: 5220/10000 (52.20%)
 
 Epoch 2:
-Loss=1.065431833267212 Batch_id=195 Accuracy=54.61: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=1.1822130680084229 Batch_id=195 Accuracy=57.46: 100%|██████████| 196/196 [00:43<00:00,  4.51it/s]
 
-Test set: Average loss: 0.0055, Accuracy: 5451/10000 (54.51%)
+Test set: Average loss: 0.0050, Accuracy: 5929/10000 (59.29%)
 
 Epoch 3:
-Loss=0.9543948173522949 Batch_id=195 Accuracy=63.06: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.9037604331970215 Batch_id=195 Accuracy=66.15: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0058, Accuracy: 5736/10000 (57.36%)
+Test set: Average loss: 0.0044, Accuracy: 6355/10000 (63.55%)
 
 Epoch 4:
-Loss=0.7508898377418518 Batch_id=195 Accuracy=69.85: 100%|██████████| 196/196 [01:16<00:00,  2.56it/s]
+Loss=1.023028016090393 Batch_id=195 Accuracy=71.46: 100%|██████████| 196/196 [00:43<00:00,  4.50it/s]
 
-Test set: Average loss: 0.0045, Accuracy: 6432/10000 (64.32%)
+Test set: Average loss: 0.0044, Accuracy: 6486/10000 (64.86%)
 
 Epoch 5:
-Loss=0.5649515390396118 Batch_id=195 Accuracy=73.94: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.7488135695457458 Batch_id=195 Accuracy=75.29: 100%|██████████| 196/196 [00:43<00:00,  4.50it/s]
 
-Test set: Average loss: 0.0039, Accuracy: 6970/10000 (69.70%)
+Test set: Average loss: 0.0028, Accuracy: 7599/10000 (75.99%)
 
 Epoch 6:
-Loss=0.5525150299072266 Batch_id=195 Accuracy=76.89: 100%|██████████| 196/196 [01:17<00:00,  2.54it/s]
+Loss=0.6292551159858704 Batch_id=195 Accuracy=78.11: 100%|██████████| 196/196 [00:43<00:00,  4.47it/s]
 
-Test set: Average loss: 0.0036, Accuracy: 7103/10000 (71.03%)
+Test set: Average loss: 0.0026, Accuracy: 7821/10000 (78.21%)
 
 Epoch 7:
-Loss=0.6174148917198181 Batch_id=195 Accuracy=79.83: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.7022161483764648 Batch_id=195 Accuracy=80.53: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0028, Accuracy: 7710/10000 (77.10%)
+Test set: Average loss: 0.0022, Accuracy: 8102/10000 (81.02%)
 
 Epoch 8:
-Loss=0.4799003005027771 Batch_id=195 Accuracy=82.18: 100%|██████████| 196/196 [01:16<00:00,  2.56it/s]
+Loss=0.4395454525947571 Batch_id=195 Accuracy=82.60: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0025, Accuracy: 7916/10000 (79.16%)
+Test set: Average loss: 0.0026, Accuracy: 7836/10000 (78.36%)
 
 Epoch 9:
-Loss=0.6108114123344421 Batch_id=195 Accuracy=84.45: 100%|██████████| 196/196 [01:17<00:00,  2.54it/s]
+Loss=0.4539540708065033 Batch_id=195 Accuracy=84.42: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0024, Accuracy: 8020/10000 (80.20%)
+Test set: Average loss: 0.0023, Accuracy: 7997/10000 (79.97%)
 
 Epoch 10:
-Loss=0.33017224073410034 Batch_id=195 Accuracy=86.22: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.34765860438346863 Batch_id=195 Accuracy=85.73: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0025, Accuracy: 7983/10000 (79.83%)
+Test set: Average loss: 0.0021, Accuracy: 8308/10000 (83.08%)
 
 Epoch 11:
-Loss=0.48934707045555115 Batch_id=195 Accuracy=87.79: 100%|██████████| 196/196 [01:17<00:00,  2.54it/s]
+Loss=0.3739401698112488 Batch_id=195 Accuracy=87.41: 100%|██████████| 196/196 [00:43<00:00,  4.47it/s]
 
-Test set: Average loss: 0.0033, Accuracy: 7645/10000 (76.45%)
+Test set: Average loss: 0.0021, Accuracy: 8337/10000 (83.37%)
 
 Epoch 12:
-Loss=0.4562051296234131 Batch_id=195 Accuracy=89.48: 100%|██████████| 196/196 [01:17<00:00,  2.54it/s]
+Loss=0.4225074350833893 Batch_id=195 Accuracy=88.32: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0020, Accuracy: 8471/10000 (84.71%)
+Test set: Average loss: 0.0015, Accuracy: 8753/10000 (87.53%)
 
 Epoch 13:
-Loss=0.5354408025741577 Batch_id=195 Accuracy=91.21: 100%|██████████| 196/196 [01:16<00:00,  2.56it/s]
+Loss=0.3384374678134918 Batch_id=195 Accuracy=89.81: 100%|██████████| 196/196 [00:43<00:00,  4.48it/s]
 
-Test set: Average loss: 0.0024, Accuracy: 8322/10000 (83.22%)
+Test set: Average loss: 0.0015, Accuracy: 8825/10000 (88.25%)
 
 Epoch 14:
-Loss=0.17979788780212402 Batch_id=195 Accuracy=92.84: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.1865644007921219 Batch_id=195 Accuracy=91.35: 100%|██████████| 196/196 [00:43<00:00,  4.50it/s]
 
-Test set: Average loss: 0.0019, Accuracy: 8593/10000 (85.93%)
+Test set: Average loss: 0.0016, Accuracy: 8703/10000 (87.03%)
 
 Epoch 15:
-Loss=0.15545208752155304 Batch_id=195 Accuracy=94.32: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.455554336309433 Batch_id=195 Accuracy=92.53: 100%|██████████| 196/196 [00:43<00:00,  4.49it/s]
 
-Test set: Average loss: 0.0023, Accuracy: 8472/10000 (84.72%)
+Test set: Average loss: 0.0015, Accuracy: 8844/10000 (88.44%)
 
 Epoch 16:
-Loss=0.07985072582960129 Batch_id=195 Accuracy=95.60: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.17733941972255707 Batch_id=195 Accuracy=93.85: 100%|██████████| 196/196 [00:43<00:00,  4.47it/s]
 
-Test set: Average loss: 0.0017, Accuracy: 8805/10000 (88.05%)
+Test set: Average loss: 0.0014, Accuracy: 8994/10000 (89.94%)
 
 Epoch 17:
-Loss=0.03720656782388687 Batch_id=195 Accuracy=96.67: 100%|██████████| 196/196 [01:16<00:00,  2.56it/s]
+Loss=0.1845535784959793 Batch_id=195 Accuracy=94.70: 100%|██████████| 196/196 [00:43<00:00,  4.48it/s]
 
-Test set: Average loss: 0.0017, Accuracy: 8837/10000 (88.37%)
+Test set: Average loss: 0.0012, Accuracy: 9092/10000 (90.92%)
 
 Epoch 18:
-Loss=0.018214857205748558 Batch_id=195 Accuracy=97.63: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.18869087100028992 Batch_id=195 Accuracy=95.89: 100%|██████████| 196/196 [00:43<00:00,  4.50it/s]
 
-Test set: Average loss: 0.0017, Accuracy: 8894/10000 (88.94%)
+Test set: Average loss: 0.0011, Accuracy: 9157/10000 (91.57%)
 
 Epoch 19:
-Loss=0.02978559397161007 Batch_id=195 Accuracy=98.08: 100%|██████████| 196/196 [01:16<00:00,  2.55it/s]
+Loss=0.13974884152412415 Batch_id=195 Accuracy=96.46: 100%|██████████| 196/196 [00:43<00:00,  4.48it/s]
 
-Test set: Average loss: 0.0016, Accuracy: 8915/10000 (89.15%)
+Test set: Average loss: 0.0011, Accuracy: 9200/10000 (92.00%)
 
 Epoch 20:
-Loss=0.040735505521297455 Batch_id=195 Accuracy=98.24: 100%|██████████| 196/196 [01:16<00:00,  2.56it/s]
+Loss=0.05817868560552597 Batch_id=195 Accuracy=96.71: 100%|██████████| 196/196 [00:43<00:00,  4.48it/s]
 
-Test set: Average loss: 0.0017, Accuracy: 8904/10000 (89.04%)
+Test set: Average loss: 0.0011, Accuracy: 9198/10000 (91.98%)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
