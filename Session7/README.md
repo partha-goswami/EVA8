@@ -142,3 +142,6 @@ Test set: Average loss: 0.0011, Accuracy: 9198/10000 (91.98%)
 ## GradCAM Outputs Gallery&#x1F537;
 
 ![image](https://user-images.githubusercontent.com/46663815/217889231-d50cd9a1-3d19-42de-ac01-4391d11d097a.png)
+
+![image](https://user-images.githubusercontent.com/46663815/218042286-cedb8dc6-6f01-4a15-9ef1-940fcc45b347.png)
+
