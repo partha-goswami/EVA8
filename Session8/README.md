@@ -158,6 +158,31 @@ Test set: Average loss: 0.0021, Accuracy: 9386/10000 (93.86%)
 | print_model_summary                | returns model summary                                              |
 | experiment                         | runs experiment                                                    |
 
+## Important Optimizer Parameters used&#x1F537;
+
+| Parameter                          | Value                                                              |
+| ---------------------------------- |:------------------------------------------------------------------:|
+| Optimizer                          | SGD                                                                |
+| Learning Rate                      | 0.01                                                               |
+| L2 Factor                          | 0.005                                                              |
+
+## Important Parameters used for LRFinder&#x1F537;
+
+| Parameter                          | Value                                                              |
+| ---------------------------------- |:------------------------------------------------------------------:|
+| end_lr                             | 0.02                                                               |
+| num_iter                           | 200                                                                |
+
+## Important Scheduler Parameters used&#x1F537;
+
+| Parameter                          | Value                                                              |
+| ---------------------------------- |:------------------------------------------------------------------:|
+| max_lr                             | 0.0199                                                             |
+| epochs                             | 24                                                                 |
+| pct_start                          | 5/24                                                               |
+| div_factor                         | 5/24                                                               |
+
+
 ## External Reference Used&#x1F537;
 
 https://github.com/kazuto1011/grad-cam-pytorch/blob/fd10ff7fc85ae064938531235a5dd3889ca46fed/grad_cam.py
